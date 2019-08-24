@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module TicTacToe
-    Rspec.describe Board do
+    RSpec.describe Board do
         
         context "#initialize" do
             it "initializes the board with a grid" do
