@@ -8,6 +8,11 @@ module TicTacToe
                 cell = Cell.new
                 expect(cell.value).to eql('')
             end
+
+            it "can be initialized with a value of 'x' by option" do
+                cell = Cell.new("x")
+                expect(cell.value).to eql('x')
+            end
         end
     end
 end

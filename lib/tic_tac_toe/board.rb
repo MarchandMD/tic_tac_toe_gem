@@ -12,6 +12,10 @@ module TicTacToe
             grid[y][x]
         end
 
+        def set_cell(x,y,value)
+            get_cell(x,y).value = value
+        end
+
         private
         def default_grid
             Array.new(3) { Array.new(3) { Cell.new } }

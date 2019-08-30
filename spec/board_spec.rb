@@ -37,5 +37,15 @@ module TicTacToe
             end
         end
 
+        describe "#set_cell" do
+            it "updates the value of the cell at (x,y) coordinates" do
+                Cat = Struct.new(:value)
+                grid = [[Cat.new("cool"),'',''],['','',''],['','','']]
+                board = Board.new(grid: grid)
+                board.set_cell(0,0, "meow")
+                expect(board.get_cell(0,0).value).to eq("meow")
+            end
+        end
+
     end 
 end
