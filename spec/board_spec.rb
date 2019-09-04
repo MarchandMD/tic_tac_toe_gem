@@ -45,7 +45,7 @@ module TicTacToe
                 board.set_cell(0,0, "meow")
                 expect(board.get_cell(0,0).value).to eq("meow")
             end
-        end
+        end 
 
         context "#game_over" do
     
