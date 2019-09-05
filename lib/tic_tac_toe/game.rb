@@ -7,5 +7,6 @@ module TicTacToe
       @board = board
       @current_player, @other_player = players.shuffle
     end
+  end
     
 end
