@@ -127,5 +127,18 @@ module TicTacToe
         
         end
 
+        context "#formatted_grid" do
+            it "puts an empty grid to start the game" do
+                grid = [
+                    [empty, empty, empty],
+                    [empty, empty, empty],
+                    [empty, empty, empty]
+                ]
+                board = Board.new(grid: grid)
+                allow(empty.value).to receive(:empty?) { true }
+                expect(board.formatted_grid).to eq([[empty,empty,empty],[empty,empty,empty],[empty,empty,empty]])
+            end
+        end
+
     end 
 end
