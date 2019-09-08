@@ -1,4 +1,4 @@
-require "tic_tac_toe/version"
+require_relative "./tic_tac_toe/version.rb"
 
 module TicTacToe
   class Error < StandardError; end
