@@ -23,7 +23,7 @@ module TicTacToe
         end
 
         describe "#grid" do
-            it "returns the value" do
+            it "returns the value of the hash of a new instance" do
                 board = Board.new(grid: "hello")
                 expect(board.grid).to eql("hello")
             end
@@ -74,7 +74,7 @@ module TicTacToe
                 expect(board.game_over).to eq false
             end
 
-            it "returns :winner when row has objects that are all the same" do
+            it "returns :winner when a row has objects that are all the same" do
                 grid = [
                     [x_cell, x_cell, x_cell],
                     [y_cell, x_cell, y_cell],
@@ -84,7 +84,7 @@ module TicTacToe
                 expect(board.game_over).to eq :winner
             end
 
-            it "returns :winner when column has objects that are all the same" do
+            it "returns :winner when a column has objects that are all the same" do
                 grid = [
                     [y_cell, x_cell, x_cell],
                     [y_cell, x_cell, y_cell],
@@ -114,7 +114,7 @@ module TicTacToe
                 expect(board.game_over).to eq :draw
             end
 
-            it "returns flase when all the spaces on the board are not taken and not draw/winner" do
+            it "returns false when all the spaces on the board are not taken and not draw/winner" do
                 grid = [
                     [y_cell, empty, empty],
                     [x_cell, x_cell, empty],
@@ -128,7 +128,7 @@ module TicTacToe
         end
 
         context "#formatted_grid" do
-            it "puts an empty grid to start the game" do
+            it "displays an empty TicTacToe board" do
                 grid = [
                     [empty, empty, empty],
                     [empty, empty, empty],
