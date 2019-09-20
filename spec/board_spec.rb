@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module TicTacToe
     RSpec.describe Board do
-        
+
         context "#initialize" do
             it "initializes the board with a grid" do
                 expect { Board.new(grid: "grid") }.to_not raise_error
@@ -45,15 +45,15 @@ module TicTacToe
                 board.set_cell(0,0, "meow")
                 expect(board.get_cell(0,0).value).to eq("meow")
             end
-        end 
+        end
 
         TestCell = Struct.new(:value)
-        let(:x_cell) { TestCell.new("X") } 
-        let(:y_cell) { TestCell.new("Y") } 
-        let(:empty) { TestCell.new } 
+        let(:x_cell) { TestCell.new("X") }
+        let(:y_cell) { TestCell.new("Y") }
+        let(:empty) { TestCell.new }
 
         context "#game_over" do
-    
+
             it "returns :winner if winner? is true" do
                 board = Board.new
                 allow(board).to receive(:winner?) { true }
@@ -123,12 +123,12 @@ module TicTacToe
                 board = Board.new(grid: grid)
                 expect(board.game_over).to be_falsey
             end
-            
-        
+
+
         end
 
         context "#formatted_grid" do
-            it "displays an empty TicTacToe board" do
+            it "displays an empty TicTacToe boardd" do
                 grid = [
                     [empty, empty, empty],
                     [empty, empty, empty],
@@ -139,6 +139,5 @@ module TicTacToe
                 expect(board.formatted_grid).to eq([[empty,empty,empty],[empty,empty,empty],[empty,empty,empty]])
             end
         end
-
-    end 
+    end
 end
