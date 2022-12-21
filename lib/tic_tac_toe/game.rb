@@ -45,7 +45,7 @@ module TicTacToe
       end
     end
 
-      private
+    private
 
     def human_move_to_coordinate(human_move)
       mapping = {
@@ -61,5 +61,5 @@ module TicTacToe
       }
       mapping[human_move]
     end
-    end
+  end
 end

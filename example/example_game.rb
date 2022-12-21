@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/tic_tac_toe.rb'
+require_relative '../lib/tic_tac_toe'
 
 puts 'Welcome to Tic-Tac-Toe!'
 bob = TicTacToe::Player.new(color: 'X', name: 'joe')
